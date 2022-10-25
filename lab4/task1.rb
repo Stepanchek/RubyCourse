@@ -1,19 +1,26 @@
 def sort(array)
-  result = []
+  result = Array.new(array.length)
 
-  array.each do | value |
-    if(value == 0)
-      result.append(value)
+  cur_idx = 0
+
+  for i in 0...array.length
+    if array[i] == 0
+      result[cur_idx] = array[i]
+      cur_idx += 1
     end
   end
-  array.each do | value |
-    if(value < 0)
-      result.append(value)
+
+  for i in 0...array.length
+    if array[i] < 0
+      result[cur_idx] = array[i]
+      cur_idx += 1
     end
   end
-  array.each do | value |
-    if(value > 0)
-      result.append(value)
+
+  for i in 0...array.length
+    if array[i] > 0
+      result[cur_idx] = array[i]
+      cur_idx += 1
     end
   end
 
